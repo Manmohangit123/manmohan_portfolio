@@ -1,5 +1,9 @@
 # manmohan_portfolio
 
 This is a basic portfolio of me. 
+from this portfolio you can have my gmail,linkedin and github accounts.
+https://manmohan-portfolio-owyg.vercel.app/profile.html
 
-![image](https://github.com/user-attachments/assets/72227910-80f4-4cd1-93ec-b92338d4f45d)
+![image](https://github.com/user-attachments/assets/287e028e-4712-4265-b21e-d36b9969059f)
+![image](https://github.com/user-attachments/assets/d7f74bfc-7390-4bc7-ad6f-351530980665)
+
