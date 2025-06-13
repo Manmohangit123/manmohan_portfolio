@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manmohan | Portfolio</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .logo {
+      float: left;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    nav {
+      float: right;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover {
+      color: #d00d0d;
+    }
+    .toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+    .hero {
+      background: #d00d0d;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    .hero span {
+      color: #fff700;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .skills .skill {
+      margin-bottom: 15px;
+    }
+    .skill p {
+      margin-bottom: 5px;
+    }
+    .bar {
+      width: 100%;
+      height: 10px;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .bar::after {
+      content: '';
+      display: block;
+      height: 100%;
+      background: #d00d0d;
+      animation: fillBar 2s ease-out forwards;
+    }
+    .html::after { width: 90%; }
+    .css::after { width: 85%; }
+    .js::after { width: 75%; }
+    .react::after { width: 70%; }
+    .node::after { width: 65%; }
+
+    @keyframes fillBar {
+      from { width: 0; }
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .project-card img {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .contact-circles {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .contact-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #d00d0d;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .contact-circle:hover {
+      transform: scale(1.15) rotate(5deg);
+      background: #b60000;
+    }
+
+    .contact-circle img {
+      width: 60%;
+      height: 60%;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Scroll animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        float: none;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .toggle {
+        display: block;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background: #222;
+      color: #fff;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 class="logo">Manmohan</h1>
+    <nav id="navbar">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="toggle" id="toggle">&#9776;</div>
+    </nav>
+    <div style="clear: both;"></div>
+  </div>
+</header>
+
+<section class="hero fade-in">
+  <div class="container">
+    <h2>Hello, I'm <span>Manmohan</span></h2>
+    <p>Full Stack Developer | Networking</p>
+  </div>
+</section>
+
+<section id="about" class="section fade-in">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I'm a passionate full stack developer and business enthusiast with experience in building responsive, scalable, and user-centric web applications.</p>
+  </div>
+</section>
+
+<section id="skills" class="section fade-in">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><p>HTML</p><div class="bar html"></div></div>
+      <div class="skill"><p>CSS</p><div class="bar css"></div></div>
+      <div class="skill"><p>JavaScript</p><div class="bar js"></div></div>
+      <div class="skill"><p>Networking</p><div class="bar react"></div></div>
+      <div class="skill"><p>Node.js</p><div class="bar node"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section fade-in">
+  <div class="container">
+    <h2>Projects, Certifications & Resume</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+      <!-- Projects -->
+      <div style="flex: 1; min-width: 280px;">
+        <h3>Projects</h3>
+        <div class="projects">
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/Maxpru">
+              <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="MAXPRU">
+              <h4>MAXPRU</h4>
+            </a>
+            <p>Displays the information of Turfs.</p>
+          </div>
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/spam_mail_detection">
+              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135765.png" alt="Spam">
+              <h4>Spam Mail Prediction</h4>
+            </a>
+            <p>Predicts spam mails to avoid cyber attacks.</p>
+          </div>
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/manmohan_portfolio">
+              <img src="https://cdn-icons-png.flaticon.com/512/5610/5610944.png" alt="Portfolio">
+              <h4>Portfolio Website</h4>
+            </a>
+            <p>Interactive portfolio to showcase my profile and work.</p>
+          </div>
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/heart-stroke-prediction">
+              <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Heart Stroke">
+              <h4>Heart Stroke Prediction</h4>
+            </a>
+            <p>ML project that predicts chances of heart stroke.</p>
+          </div>
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/slashservices">
+              <img src="https://cdn-icons-png.flaticon.com/512/1046/1046870.png" alt="Restaurant">
+              <h4>Slash Services</h4>
+            </a>
+            <p>Frontend app showing restaurant information.</p>
+          </div>
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/womensafetysecurity">
+              <img src="https://cdn-icons-png.flaticon.com/512/3013/3013945.png" alt="Women Safety">
+              <h4>Women Safety and Security</h4>
+            </a>
+            <p>Mobile app built for emergency support to women.</p>
+          </div>
+          <div class="project-card">
+            <a href="https://github.com/Manmohangit123/restaurent_app">
+              <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Restaurant App">
+              <h4>Restaurant App</h4>
+            </a>
+            <p>Full-stack web app for restaurant features.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div style="flex: 1; min-width: 280px;">
+        <h3>Certifications</h3>
+        <div class="projects">
+          <div class="project-card">
+            <a href="https://drive.google.com/drive/u/0/folders/1WbhXcroIYybNRtlV69EKTX3WJeqfS0wF">
+              <img src="https://cdn-icons-png.flaticon.com/512/6336/6336654.png" alt="Certifications">
+              <h4>Certifications</h4>
+            </a>
+            <p>All my certifications can be viewed here.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume -->
+      <div style="flex: 1; min-width: 280px;">
+        <h3>Resume</h3>
+        <div class="projects">
+          <div class="project-card">
+            <a href="https://drive.google.com/drive/u/0/folders/1oFL-FKAP_8yXVNWux7sQGj0Ch_BM38uj">
+              <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume">
+              <h4>Resume</h4>
+            </a>
+            <p>You can view my resume here.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section fade-in">
+  <div class="container">
+    <h2>Contact Me</h2>
+    <div class="contact-circles">
+      <a href="https://www.linkedin.com/in/manmohan-kancherla/" class="contact-circle" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="mailto:kancherlamanmohan9@gmail.com" class="contact-circle">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
+      </a>
+      <a href="https://github.com/Mannmohangit123" class="contact-circle" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Manmohan | All Rights Reserved</p>
+</footer>
+
+<script>
+  const toggle = document.getElementById('toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Scroll animation reveal
+  const fadeIns = document.querySelectorAll('.fade-in');
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.1 });
+
+  fadeIns.forEach(el => appearOnScroll.observe(el));
+</script>
+
+</body>
+</html>
