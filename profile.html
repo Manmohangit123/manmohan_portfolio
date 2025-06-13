@@ -50,18 +50,63 @@
       font-size: 1.8rem;
       cursor: pointer;
     }
+
     .hero {
-      background: #d00d0d;
+      background: linear-gradient(rgba(208, 13, 13, 0.85), rgba(208, 13, 13, 0.85)),
+                  url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=80') center/cover fixed;
       color: white;
       padding: 80px 0;
       text-align: center;
     }
-    .hero span {
+
+    .hero h2 span {
       color: #fff700;
     }
+
+    #typing {
+      font-size: 1.3rem;
+      margin-top: 10px;
+      display: inline-block;
+      animation: slideIn 1s ease forwards;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid white;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
     .section {
       padding: 60px 0;
     }
+
+    h2 {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #d00d0d;
+      transition: width 0.4s ease-in-out;
+    }
+    h2:hover::after {
+      width: 100%;
+    }
+
     .skills .skill {
       margin-bottom: 15px;
     }
@@ -107,7 +152,7 @@
     }
 
     .project-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-5px) scale(1.03);
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
 
@@ -116,6 +161,11 @@
       height: 24px;
       vertical-align: middle;
       margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.15);
     }
 
     .contact-circles {
@@ -133,12 +183,13 @@
       height: 55px;
       border-radius: 50%;
       background: #d00d0d;
-      transition: transform 0.3s ease, background 0.3s ease;
+      animation: pulse 2s infinite;
     }
 
-    .contact-circle:hover {
-      transform: scale(1.15) rotate(5deg);
-      background: #b60000;
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
 
     .contact-circle img {
@@ -148,7 +199,6 @@
       filter: brightness(0) invert(1);
     }
 
-    /* Scroll animation */
     .fade-in {
       opacity: 0;
       transform: translateY(30px);
@@ -158,6 +208,13 @@
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
+      animation: bounceIn 0.6s ease;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.9); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
 
     @media (max-width: 768px) {
@@ -207,7 +264,7 @@
 <section class="hero fade-in">
   <div class="container">
     <h2>Hello, I'm <span>Manmohan</span></h2>
-    <p>Full Stack Developer | Networking</p>
+    <p><span id="typing"></span></p>
   </div>
 </section>
 
@@ -235,9 +292,9 @@
   <div class="container">
     <h2>Projects, Certifications & Resume</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-      <!-- Projects -->
       <div style="flex: 1; min-width: 280px;">
         <h3>Projects</h3>
+        <div class="projects">
         <div class="projects">
           <div class="project-card">
             <a href="https://github.com/Manmohangit123/Maxpru">
@@ -290,8 +347,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Certifications -->
+        </div>
+      </div>
       <div style="flex: 1; min-width: 280px;">
         <h3>Certifications</h3>
         <div class="projects">
@@ -304,8 +361,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Resume -->
       <div style="flex: 1; min-width: 280px;">
         <h3>Resume</h3>
         <div class="projects">
@@ -318,7 +373,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -347,7 +401,6 @@
 <script>
   const toggle = document.getElementById('toggle');
   const navLinks = document.getElementById('nav-links');
-
   toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
@@ -362,7 +415,6 @@
     });
   });
 
-  // Scroll animation reveal
   const fadeIns = document.querySelectorAll('.fade-in');
   const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
@@ -373,6 +425,18 @@
   }, { threshold: 0.1 });
 
   fadeIns.forEach(el => appearOnScroll.observe(el));
+
+  // Typing slide-in effect
+  const typingText = "Full Stack Developer | Networking";
+  let i = 0;
+  function typeWriter() {
+    if (i < typingText.length) {
+      document.getElementById("typing").innerHTML += typingText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 80);
+    }
+  }
+  window.onload = typeWriter;
 </script>
 
 </body>
