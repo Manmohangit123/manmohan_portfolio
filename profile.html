@@ -6,19 +6,19 @@
   <title>Manmohan | Portfolio</title>
   <style>
     :root {
-      --bg: #f4f4f4;
-      --text: #333;
-      --card: #fff;
+      --bg: #ffffff;
+      --text: #000000;
+      --card: #f0f0f0;
       --primary: #d00d0d;
-      --header: #222;
+      --header: #f8f8f8;
     }
 
     [data-theme="dark"] {
-      --bg: #111;
-      --text: #eee;
-      --card: #1e1e1e;
+      --bg: #000000;
+      --text: #ffffff;
+      --card: #121212;
       --primary: #f44336;
-      --header: #000;
+      --header: #000000;
     }
 
     * {
@@ -34,7 +34,7 @@
 
     header {
       background: var(--header);
-      color: #fff;
+      color: #000;
       padding: 1rem 0;
       position: sticky;
       top: 0;
@@ -64,9 +64,13 @@
     }
 
     .nav-links a {
-      color: #fff;
+      color: #000;
       text-decoration: none;
       transition: color 1.0s;
+    }
+
+    [data-theme="dark"] .nav-links a {
+      color: #fff;
     }
 
     .nav-links a:hover {
@@ -217,7 +221,7 @@
       text-align: center;
       padding: 1rem 0;
       background: var(--header);
-      color: #fff;
+      color: var(--text);
       margin-top: 50px;
     }
 
@@ -279,7 +283,7 @@
 
 <header>
   <div class="container">
-    <h1 class="logo">Manmohan</h1>
+    <h1 class="logo">Manmohan Portfolio</h1>
     <nav id="navbar">
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
@@ -301,7 +305,11 @@
     <a href="https://drive.google.com/drive/u/0/folders/1oFL-FKAP_8yXVNWux7sQGj0Ch_BM38uj" class="download-resume" target="_blank">Download Resume</a>
   </div>
 </section>
-<section id="skills" class="section fade-in">
+
+<!-- Skills, Projects, Contact Sections here – unchanged (from your previous content) -->
+<!-- For brevity, I didn’t paste them again, but you can include them right here as is. -->
+
+  <section id="skills" class="section fade-in">
   <div class="container">
     <h2>Skills</h2>
     <div class="skills">
@@ -419,14 +427,9 @@
     </div>
   </div>
 </section>
-
 <footer>
   <p>© 2025 Manmohan | All Rights Reserved</p>  
 </footer>
-
-
-<!-- Sections unchanged (About, Skills, Projects, Contact, Footer) -->
-<!-- Keep your existing content here. I kept it untouched for brevity. -->
 
 <!-- Scroll to Top Button -->
 <button class="top-btn" id="topBtn">&#8679;</button>
@@ -480,8 +483,9 @@
   // Dark Mode Toggle
   const themeToggle = document.getElementById("themeToggle");
   themeToggle.onclick = () => {
-    document.documentElement.toggleAttribute("data-theme");
-    themeToggle.textContent = document.documentElement.hasAttribute("data-theme") ? "☀️ Light" : "🌙 Dark";
+    const root = document.documentElement;
+    root.toggleAttribute("data-theme");
+    themeToggle.textContent = root.hasAttribute("data-theme") ? "☀️ Light" : "🌙 Dark";
   };
 </script>
 
