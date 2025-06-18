@@ -31,15 +31,15 @@
       color: var(--text);
       line-height: 1.6;
     }
+header {
+  background: #000000; /* changed to black */
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    header {
-      background: var(--header);
-      color: #000;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
 
     .container {
       width: 90%;
@@ -63,19 +63,19 @@
       gap: 1rem;
     }
 
-    .nav-links a {
-      color: #000;
-      text-decoration: none;
-      transition: color 1.0s;
-    }
+   .nav-links a {
+  color: white; /* white nav links for black header */
+  text-decoration: none;
+  transition: color 1.0s;
+}
 
     [data-theme="dark"] .nav-links a {
       color: #fff;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-    }
+ .nav-links a:hover {
+  color: var(--primary);
+}
 
     .toggle {
       display: none;
@@ -166,33 +166,34 @@
       gap: 20px;
     }
 
-    .project-card {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      flex: 1;
-      min-width: 250px;
-      max-width: 300px;
-      text-align: center;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+   .project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-    .project-card:hover {
-      background-color: #000;
-      color: #fff;
-    }
+.project-card:hover {
+  background-color: #000;
+  color: #fff;
+}
 
-    .project-card img {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 10px;
-      transition: filter 0.3s ease;
-    }
+/* Removed image filter on hover */
+.project-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  transition: filter 0.3s ease;
+}
 
-    .project-card:hover img {
-      filter: brightness(20);
-    }
+.project-card:hover img {
+  filter: none; /* Keep image colors intact */
+}
 
     .project-card h4 {
       margin: 10px 0;
@@ -229,14 +230,13 @@
       filter: brightness(0) invert(1);
     }
 
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: var(--header);
-      color: var(--text);
-      margin-top: 50px;
-    }
-
+  footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #000000; /* changed to black */
+  color: white;
+  margin-top: 50px;
+}
     .top-btn {
       position: fixed;
       bottom: 20px;
@@ -317,10 +317,6 @@
     <a href="https://drive.google.com/drive/u/0/folders/1oFL-FKAP_8yXVNWux7sQGj0Ch_BM38uj" class="download-resume" target="_blank">Download Resume</a>
   </div>
 </section>
-
-<!-- Skills, Projects, Contact Sections here – unchanged (from your previous content) -->
-<!-- For brevity, I didn’t paste them again, but you can include them right here as is. -->
-
   <section id="skills" class="section fade-in">
   <div class="container">
     <h2>Skills</h2>
@@ -341,8 +337,6 @@
       <div style="flex: 1; min-width: 280px;">
         <h3>Projects</h3>
         <div class="projects">
-        <!-- Replace the <div class="projects"> section with the one below -->
-
 <div class="projects">
 <div class="project-card">
   <a href="https://github.com/Manmohangit123/Maxpru">
@@ -381,20 +375,17 @@
   </a>
   <p>ML project that predicts chances of heart stroke.</p>
 </div>
+<div class="project-card">
+  <a href="https://github.com/Manmohangit123/slashservices">
+    <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Pizza Icon" width="100" height="100" />
+    <h4>Slash Services</h4>
+  </a>
+  <p>Frontend app displaying restaurant information.</p>
+</div>
 
-  <div class="project-card">
-    <a href="https://github.com/Manmohangit123/slashservices">
-     <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Cricket Bat" width="100" height="100" />
-
-
-      <h4>Slash Services</h4>
-    </a>
-    <p>Frontend app displaying restaurant information.</p>
-  </div>
-
- <div class="project-card">
+<div class="project-card">
   <a href="https://github.com/Manmohangit123/womensafetysecurity">
-    <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Icon" width="80" />
+    <img src="https://github.com/Manmohangit123/manmohan_portfolio/blob/main/85f71317-0493-4efb-a24a-c149a8c12df0.png?raw=true" alt="Mobile App Icon" width="80" />
     <h4>Women Safety and Security</h4>
   </a>
   <p>Mobile app built for emergency support to women.</p>
@@ -414,14 +405,15 @@
   <div class="projects">
     <div class="project-card">
       <a href="https://drive.google.com/drive/u/0/folders/1WbhXcroIYybNRtlV69EKTX3WJeqfS0wF">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135763.png" alt="Certificate Icon" width="80" />
+        <img src="https://thumbs.dreamstime.com/b/cartoon-diploma-icon-emoji-isolated-illustration-vector-170752490.jpg" alt="Certificate Icon" width="80" />
         <h4>Certifications</h4>
       </a>
       <p>All my certifications can be viewed here.</p>
     </div>
   </div>
 </div>
-
+</div>
+</div>
       <div style="flex: 1; min-width: 280px;">
         <h3>Resume</h3>
         <div class="projects">
