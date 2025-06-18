@@ -39,19 +39,34 @@ header {
   top: 0;
   z-index: 1000;
 }
-
-
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
     .container {
       width: 90%;
       max-width: 1100px;
       margin: auto;
     }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .logo {
-      float: left;
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
+.logo img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 
     nav {
       float: right;
@@ -294,20 +309,24 @@ header {
 <body>
 
 <header>
-  <div class="container">
-    <h1 class="logo">Manmohan Portfolio</h1>
-    <nav id="navbar">
-      <ul class="nav-links" id="nav-links">
+  <div class="container header-flex">
+    <div class="logo">
+      <img src="https://github.com/Manmohangit123/manmohan_portfolio/blob/main/Screenshot%202025-06-18%20211857.png?raw=true" alt="Logo" />
+      <h1>Manmohan Portfolio</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#resume">Resume</a></li>
       </ul>
-      <div class="toggle" id="toggle">&#9776;</div>
     </nav>
-    <div style="clear: both;"></div>
   </div>
 </header>
+
+
 
 <section class="hero">
   <div class="container">
