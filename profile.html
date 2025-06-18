@@ -161,29 +161,41 @@
     }
 
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     .project-card {
-      background: var(--card);
-      padding: 1rem;
+      background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 250px;
+      max-width: 300px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .project-card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      background-color: #000;
+      color: #fff;
     }
 
     .project-card img {
-      width: 24px;
-      height: 24px;
-      vertical-align: middle;
-      margin-right: 8px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+      transition: filter 0.3s ease;
+    }
+
+    .project-card:hover img {
+      filter: brightness(20);
+    }
+
+    .project-card h4 {
+      margin: 10px 0;
     }
 
     .contact-circles {
@@ -329,72 +341,87 @@
       <div style="flex: 1; min-width: 280px;">
         <h3>Projects</h3>
         <div class="projects">
-        <div class="projects">
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/Maxpru">
-              <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="MAXPRU">
-              <h4>MAXPRU</h4>
-            </a>
-            <p>Displays the information of Turfs.</p>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/spam_mail_detection">
-              <img src="https://cdn-icons-png.flaticon.com/512/3135/3135765.png" alt="Spam">
-              <h4>Spam Mail Prediction</h4>
-            </a>
-            <p>Predicts spam mails to avoid cyber attacks.</p>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/manmohan_portfolio">
-              <img src="https://cdn-icons-png.flaticon.com/512/5610/5610944.png" alt="Portfolio">
-              <h4>Portfolio Website</h4>
-            </a>
-            <p>Interactive portfolio to showcase my profile and work.</p>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/heart-stroke-prediction">
-              <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Heart Stroke">
-              <h4>Heart Stroke Prediction</h4>
-            </a>
-            <p>ML project that predicts chances of heart stroke.</p>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/slashservices">
-              <img src="https://cdn-icons-png.flaticon.com/512/1046/1046870.png" alt="Restaurant">
-              <h4>Slash Services</h4>
-            </a>
-            <p>Frontend app displaying restaurant information.</p>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/womensafetysecurity">
-              <img src="https://cdn-icons-png.flaticon.com/512/3013/3013945.png" alt="Women Safety">
-              <h4>Women Safety and Security</h4>
-            </a>
-            <p>Mobile app built for emergency support to women.</p>
-          </div>
-          <div class="project-card">
-            <a href="https://github.com/Manmohangit123/restaurent_app">
-              <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" alt="Restaurant App">
-              <h4>Restaurant App</h4>
-            </a>
-            <p>Full-stack web app for restaurant features.</p>
-          </div>
-        </div>
+        <!-- Replace the <div class="projects"> section with the one below -->
+
+<div class="projects">
+<div class="project-card">
+  <a href="https://github.com/Manmohangit123/Maxpru">
+    <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location Icon" width="80" />
+    <h4>MAXPRU</h4>
+  </a>
+  <p>Displays the information of Turfs.</p>
+</div>
+
+
+  <div class="project-card">
+  <a href="https://github.com/Manmohangit123/spam_mail_detection">
+    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Cross Symbol" width="80" />
+    <h4>Spam Mail Prediction</h4>
+  </a>
+  <p>Predicts spam mails to avoid cyber attacks.</p>
+</div>
+
+  <div class="project-card">
+    <a href="https://github.com/Manmohangit123/manmohan_portfolio">
+      <img src="https://cdn-icons-png.flaticon.com/512/3132/3132086.png" alt="Portfolio">
+      <h4>Portfolio Website</h4>
+    </a>
+    <p>Interactive portfolio to showcase my profile and work.</p>
+  </div>
+ <div class="project-card">
+  <a href="https://github.com/Manmohangit123/heart-stroke-prediction">
+  <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" 
+     alt="Doctor Icon" 
+     width="100" 
+     height="100" 
+     style="border-radius: 8px;" />
+
+
+    <h4>Heart Stroke Prediction</h4>
+  </a>
+  <p>ML project that predicts chances of heart stroke.</p>
+</div>
+
+  <div class="project-card">
+    <a href="https://github.com/Manmohangit123/slashservices">
+     <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Cricket Bat" width="100" height="100" />
+
+
+      <h4>Slash Services</h4>
+    </a>
+    <p>Frontend app displaying restaurant information.</p>
+  </div>
+
+ <div class="project-card">
+  <a href="https://github.com/Manmohangit123/womensafetysecurity">
+    <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="Mobile Icon" width="80" />
+    <h4>Women Safety and Security</h4>
+  </a>
+  <p>Mobile app built for emergency support to women.</p>
+</div>
+
+  <div class="project-card">
+    <a href="https://github.com/Manmohangit123/restaurent_app">
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Restaurant App">
+      <h4>Restaurant App</h4>
+    </a>
+    <p>Full-stack web app for restaurant features.</p>
+  </div>
+</div>
       </div>
-        </div>
-      </div>
-      <div style="flex: 1; min-width: 280px;">
-        <h3>Certifications</h3>
-        <div class="projects">
-          <div class="project-card">
-            <a href="https://drive.google.com/drive/u/0/folders/1WbhXcroIYybNRtlV69EKTX3WJeqfS0wF">
-              <img src="https://cdn-icons-png.flaticon.com/512/6336/6336654.png" alt="Certifications">
-              <h4>Certifications</h4>
-            </a>
-            <p>All my certifications can be viewed here.</p>
-          </div>
-        </div>
-      </div>
+     <div style="flex: 1; min-width: 280px;">
+  <h3>Certifications</h3>
+  <div class="projects">
+    <div class="project-card">
+      <a href="https://drive.google.com/drive/u/0/folders/1WbhXcroIYybNRtlV69EKTX3WJeqfS0wF">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135763.png" alt="Certificate Icon" width="80" />
+        <h4>Certifications</h4>
+      </a>
+      <p>All my certifications can be viewed here.</p>
+    </div>
+  </div>
+</div>
+
       <div style="flex: 1; min-width: 280px;">
         <h3>Resume</h3>
         <div class="projects">
@@ -433,9 +460,6 @@
 
 <!-- Scroll to Top Button -->
 <button class="top-btn" id="topBtn">&#8679;</button>
-
-<!-- Dark Mode Toggle -->
-<button class="theme-toggle" id="themeToggle">🌙 Dark</button>
 
 <script>
   const toggle = document.getElementById('toggle');
