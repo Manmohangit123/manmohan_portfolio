@@ -9,7 +9,7 @@
       --bg: #ffffff;
       --text: #000000;
       --card: #f0f0f0;
-      --primary: #d00d0d;
+      --primary: rgba(13, 192, 208, 0.85);
       --header: #f8f8f8;
     }
 
@@ -17,7 +17,7 @@
       --bg: #000000;
       --text: #ffffff;
       --card: #121212;
-      --primary: #f44336;
+      --primary:rgba(13, 192, 208, 0.85);
       --header: #000000;
     }
 
@@ -32,7 +32,7 @@
       line-height: 1.6;
     }
 header {
-  background: #000000; /* changed to black */
+  background: rgba(13, 192, 208, 0.85);; /* changed to black */
   color: white;
   padding: 1rem 0;
   position: sticky;
@@ -61,8 +61,8 @@ header {
 }
 
 .logo img {
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -99,8 +99,8 @@ header {
     }
 
     .hero {
-      background: linear-gradient(rgba(208, 13, 13, 0.85), rgba(208, 13, 13, 0.85)),
-      url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1400&q=80') center/cover fixed;
+      background: linear-gradient(rgba(13, 192, 208, 0.85), rgba(13, 192, 208, 0.85)),
+      url('https://github.com/Manmohangit123/manmohan_portfolio/blob/main/Screenshot%202025-06-19%20115921.png?raw=true') center/cover fixed;
       color: white;
       padding: 100px 20px;
       text-align: center;
@@ -190,12 +190,13 @@ header {
   min-width: 250px;
   max-width: 300px;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Add transform transition */
 }
 
 .project-card:hover {
   background-color: #000;
   color: #fff;
+  transform: scale(1.05); /* Fix: Correct scaling effect */
 }
 
 /* Removed image filter on hover */
@@ -248,7 +249,7 @@ header {
   footer {
   text-align: center;
   padding: 1rem 0;
-  background: #000000; /* changed to black */
+  background: rgba(13, 192, 208, 0.85);; /* changed to black */
   color: white;
   margin-top: 50px;
 }
@@ -353,6 +354,7 @@ header {
     <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
       <div style="flex: 1; min-width: 280px;">
         <h3>Projects</h3>
+        <h1>  </h1>
         <div class="projects">
 <div class="projects">
 <div class="project-card">
