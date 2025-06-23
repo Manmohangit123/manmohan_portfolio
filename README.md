@@ -10,7 +10,6 @@ https://manmohan-portfolio-owyg.vercel.app/profile.html
 
 ## Screenshots
 
-![image](https://github.com/user-attachments/assets/30ee4528-51c9-4023-81e5-475423a93f5b)
-![image](https://github.com/user-attachments/assets/eddabc82-0cf8-42b9-8537-594147f9b3b8)
-
+![alt text](image.png)
+![alt text](image-1.png)
 
