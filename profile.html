@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manmohan | Portfolio</title>
+  <title>🧑‍💻 Manmohan | Portfolio</title>
   <style>
     :root {
-      --bg: #ffffff;
+      --bg: #fcfcfc;
       --text: #000000;
       --card: #f0f0f0;
-      --primary: rgba(13, 192, 208, 0.85);
+      --primary: rgba(18, 222, 232, 0.85);
       --header: #f8f8f8;
     }
 
@@ -106,6 +106,9 @@ header {
   position: relative;
 }
 
+.hero p {
+  font-weight: bold;
+}
 
     .hero h2 span {
       color: #fff700;
@@ -168,8 +171,8 @@ header {
     .html::after { width: 90%; }
     .css::after { width: 85%; }
     .js::after { width: 75%; }
-    .react::after { width: 70%; }
-    .node::after { width: 65%; }
+    .react::after { width: 65%; }
+    .node::after { width: 60%; }
 
     @keyframes fillBar {
       from { width: 0; }
@@ -214,6 +217,11 @@ header {
     .project-card h4 {
       margin: 10px 0;
     }
+.edu-icon {
+  width: 140px;
+  height: auto;
+  margin-bottom: 10px;
+}
 
     .contact-circles {
       display: flex;
@@ -226,11 +234,11 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 55px;
-      height: 55px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background: var(--primary);
-      animation: pulse 2s infinite;
+      animation: pulse 3s infinite;
     }
 
     @keyframes pulse {
@@ -239,12 +247,15 @@ header {
       100% { transform: scale(1); }
     }
 
-    .contact-circle img {
-      width: 60%;
-      height: 60%;
-      object-fit: contain;
-      filter: brightness(0) invert(1);
-    }
+ .contact-circle img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  /* REMOVE this line below */
+  /* filter: brightness(0) invert(1); */
+}
+
+
 
   footer {
   text-align: center;
@@ -319,6 +330,7 @@ header {
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#Certifications">Certifications</a></li>
         <li><a href="#Resume">Resume</a></li>
@@ -333,8 +345,9 @@ header {
     <p><span id="typing">
     <p>A Full Stack Developer & Networking Enthusiast</p>
     <p>UnderGrad CS</p>
-    <p>PVPSIT'26 | NEC Finalist | E-CELL member</p>
-    <p>7893183944 | kancherlamanmohan9@gmail.com</p>
+   <p><strong>7893183944</strong> | <strong>kancherlamanmohan9@gmail.com</strong></p>
+<p><strong>PVPSIT'26</strong> | <strong>NEC Finalist</strong> | <strong>E-CELL member</strong></p>
+
     </span></p>
   </div>
 </section>
@@ -347,6 +360,28 @@ header {
       <div class="skill"><p>JavaScript</p><div class="bar js"></div></div>
       <div class="skill"><p>Networking</p><div class="bar react"></div></div>
       <div class="skill"><p>Node.js</p><div class="bar node"></div></div>
+    </div>
+  </div>
+</section>
+<section id="education" class="section fade-in">
+  <div class="container">
+    <h2>Education</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://www.mychildmyschool.com/public/uploads/documents/99/691_2022-02-27.jpg" class="edu-icon" alt="School Icon" >
+        <h4>Schooling</h4>
+        <p><strong>Nalanda Vidya Nikethan</strong><br>2010 – 2020 | Completed</p>
+      </div>
+      <div class="project-card">
+        <img src="https://sribhavishya.com/wp-content/uploads/2021/04/g1.jpg" class="edu-icon" alt="College Icon" >
+        <h4>Intermediate</h4>
+        <p><strong>Sri Bhavishya Junior College</strong><br>2020 – 2022 | Completed</p>
+      </div>
+      <div class="project-card">
+        <img src="https://media.collegedekho.com/media/img/institute/crawled_images/PVP_1.JPG" class="edu-icon" alt="University Icon" >
+        <h4>B.Tech - CSE</h4>
+        <p><strong>PVPSIT - Prasad V. Potluri Siddhartha Institute of Technology</strong><br>2022 – 2026 | Ongoing</p>
+      </div>
     </div>
   </div>
 </section>
@@ -453,18 +488,27 @@ header {
 </section>
 
 <section id="contact" class="section fade-in">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <div class="contact-circles">
-      <a href="https://www.linkedin.com/in/manmohan-kancherla/" class="contact-circle" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
-      </a>
-      <a href="mailto:kancherlamanmohan9@gmail.com" class="contact-circle">
-        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Email">
-      </a>
-      <a href="https://github.com/Manmohangit123" class="contact-circle" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
-      </a>
+ <div class="container">
+  <h2>Contact Me</h2>
+ <div class="contact-circles">
+  <a href="https://www.linkedin.com/in/manmohan-kancherla/" class="contact-circle" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+  </a>
+  <a href="https://www.instagram.com/kancherlamanmohan_07/" class="contact-circle" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+  <a href="mailto:kancherlamanmohan9@gmail.com" class="contact-circle">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+  </a>
+  <a href="https://github.com/Manmohangit123" class="contact-circle" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+  </a>
+</div>
+
+
+
+</div>
+
     </div>
   </div>
 </section>
