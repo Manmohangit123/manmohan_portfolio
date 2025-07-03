@@ -171,6 +171,7 @@ header {
     .html::after { width: 90%; }
     .css::after { width: 85%; }
     .js::after { width: 75%; }
+     .DSA::after { width: 70%; }
     .react::after { width: 65%; }
     .node::after { width: 60%; }
 
@@ -254,9 +255,6 @@ header {
   /* REMOVE this line below */
   /* filter: brightness(0) invert(1); */
 }
-
-
-
   footer {
   text-align: center;
   padding: 1rem 0;
@@ -328,7 +326,7 @@ header {
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -358,6 +356,7 @@ header {
       <div class="skill"><p>HTML</p><div class="bar html"></div></div>
       <div class="skill"><p>CSS</p><div class="bar css"></div></div>
       <div class="skill"><p>JavaScript</p><div class="bar js"></div></div>
+       <div class="skill"><p>Data Structures</p><div class="bar DSA"></div></div>
       <div class="skill"><p>Networking</p><div class="bar react"></div></div>
       <div class="skill"><p>Node.js</p><div class="bar node"></div></div>
     </div>
@@ -504,16 +503,10 @@ header {
     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
   </a>
 </div>
-
-
-
 </div>
-
-    </div>
-  </div>
 </section>
 <footer>
-  <p>© 2025 Manmohan | All Rights Reserved</p>  
+<p>© 2025 Manmohan | All Rights Reserved</p>  
 </footer>
 
 <!-- Scroll to Top Button -->
@@ -560,8 +553,7 @@ header {
   };
   topBtn.onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
+};
   // Dark Mode Toggle
   const themeToggle = document.getElementById("themeToggle");
   themeToggle.onclick = () => {
@@ -570,6 +562,5 @@ header {
     themeToggle.textContent = root.hasAttribute("data-theme") ? "☀️ Light" : "🌙 Dark";
   };
 </script>
-
 </body>
 </html>
