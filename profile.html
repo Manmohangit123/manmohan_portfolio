@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -341,7 +342,7 @@ header {
   <div class="container">
     <h2>Hello, I'm <span>Manmohan</span></h2>
     <p><span id="typing">
-    <p>A Full Stack Developer & Networking Enthusiast</p>
+   
     <p>UnderGrad CS</p>
    <p><strong>7893183944</strong> | <strong>kancherlamanmohan9@gmail.com</strong></p>
 <p><strong>PVPSIT'26</strong> | <strong>NEC Finalist</strong> | <strong>E-CELL member</strong></p>
@@ -513,11 +514,14 @@ header {
 <button class="top-btn" id="topBtn">&#8679;</button>
 
 <script>
+  // Mobile nav toggle
   const toggle = document.getElementById('toggle');
   const navLinks = document.getElementById('nav-links');
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+  if (toggle && navLinks) {
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -526,7 +530,7 @@ header {
       document.querySelector(this.getAttribute('href')).scrollIntoView({
         behavior: 'smooth'
       });
-      navLinks.classList.remove('active');
+      if(navLinks) navLinks.classList.remove('active');
     });
   });
 
@@ -553,14 +557,35 @@ header {
   };
   topBtn.onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-};
+  };
+
   // Dark Mode Toggle
   const themeToggle = document.getElementById("themeToggle");
-  themeToggle.onclick = () => {
-    const root = document.documentElement;
-    root.toggleAttribute("data-theme");
-    themeToggle.textContent = root.hasAttribute("data-theme") ? "☀️ Light" : "🌙 Dark";
-  };
+  if (themeToggle) {
+    themeToggle.onclick = () => {
+      const root = document.documentElement;
+      root.toggleAttribute("data-theme");
+      themeToggle.textContent = root.hasAttribute("data-theme") ? "☀️ Light" : "🌙 Dark";
+    };
+  }
+
+  // 🔄 Logo changing every 30 seconds
+  const logos = [
+    "https://your-link.com/logo1.png",
+    "https://your-link.com/logo2.png",
+    "https://your-link.com/logo3.png"
+  ];
+  let currentLogo = 0;
+  const logoImg = document.getElementById("logoImg");
+
+  setInterval(() => {
+    logoImg.style.opacity = 0; // fade out
+    setTimeout(() => {
+      currentLogo = (currentLogo + 1) % logos.length;
+      logoImg.src = logos[currentLogo];
+      logoImg.style.opacity = 1; // fade in
+    }, 1000);
+  }, 30000); // 30 seconds
 </script>
 </body>
 </html>
