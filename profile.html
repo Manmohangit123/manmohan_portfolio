@@ -51,7 +51,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-     background: linear-gradient(rgba(13, 192, 208, 0.4), rgba(13, 192, 208, 0.4)),
+     background: linear-gradient(rgba(13, 192, 208, 0.2), rgba(13, 192, 208, 0.2)),
   url('https://github.com/Manmohangit123/manmohan_portfolio/blob/main/Screenshot%202025-09-14%20003921.png?raw=true')  center center/cover;
     display: flex;
     justify-content: center;
@@ -420,7 +420,7 @@ header {
 </section>
 <section id="education" class="section fade-in">
   <div class="container">
-    <h2>Education</h2>
+    <h2>EDUCATION</h2>
     <div class="projects">
       <div class="project-card">
         <img src="https://www.mychildmyschool.com/public/uploads/documents/99/691_2022-02-27.jpg" class="edu-icon" alt="School Icon" >
@@ -446,7 +446,7 @@ header {
     <h2>Projects, Certifications, Hackathons & Resume</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
       <div style="flex: 1; min-width: 280px;">
-        <h3>Projects</h3>
+        <h3>PROJECTS</h3>
         <h1>  </h1>
         <div class="projects">
           <div class="projects">
@@ -521,15 +521,13 @@ header {
       </div>
       <section id="Certifications">
      <div style="flex: 1; min-width: 280px;">
-  <h3>Certifications</h3>
+  <h3>CERTIFICATIONS</h3>
   <div class="projects">
     <div class="project-card">
-      <a href="https://drive.google.com/drive/u/0/folders/1WbhXcroIYybNRtlV69EKTX3WJeqfS0wF">
         <img src="https://thumbs.dreamstime.com/b/cartoon-diploma-icon-emoji-isolated-illustration-vector-170752490.jpg" alt="Certificate Icon" width="80" />
         <h4>Certifications</h4>
-      </a>
-      <p>All my certifications can be viewed here.</p>
-    </div>
+      <a href="https://drive.google.com/drive/u/0/folders/1WbhXcroIYybNRtlV69EKTX3WJeqfS0wF"><p>CLICK HERE</p></a>
+  </div>
   </div>
   </section>
   <section id="Certifications">
@@ -537,32 +535,28 @@ header {
   <h3>HACKATHONS</h3>
   <div class="projects">
     <div class="project-card">
-      <a href="https://drive.google.com/drive/u/0/folders/1hLXaR2enVEIuqkY8LmGB2sE_KSLfvH_7">
+      
         <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=500,height=500/event-covers/ql/cf17720c-51e2-4be2-95d2-7bd9ef559f4d.png" alt="Certificate Icon" width="80" />
         <h4>RISEIN APTOS HACKATHON</h4>
-      </a>
-      <p>More Details........</p>
+      
+      <a href="https://drive.google.com/drive/u/0/folders/1hLXaR2enVEIuqkY8LmGB2sE_KSLfvH_7"><p>For More Details........</p></a>
     </div>
      <div class="project-card">
-      <a href="https://drive.google.com/drive/u/0/folders/1cEd2DlPUQoMNxb_WBZ-jBlLk4DnmyxsQ">
         <img src="https://i0.wp.com/www.scholarshipsinindia.com/wp-content/uploads/adobe-india-hackathon.jpg?fit=200%2C200&ssl=1" alt="Certificate Icon" width="80" />
         <h4>Adobe India HACKATHON</h4>
-      </a>
-      <p>More Details........</p>
+      <a href="https://drive.google.com/drive/u/0/folders/1cEd2DlPUQoMNxb_WBZ-jBlLk4DnmyxsQ"><p>For More Details........</p></a>
     </div>
     
   </div>
   </section>
 <section id="Resume">
       <div style="flex: 1; min-width: 280px;">
-        <h3>Resume</h3>
+        <h3>RESUME</h3>
         <div class="projects">
           <div class="project-card">
-            <a href="https://drive.google.com/drive/u/0/folders/1oFL-FKAP_8yXVNWux7sQGj0Ch_BM38uj">
               <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Resume">
               <h4>Resume</h4>
-            </a>
-            <p>You can view my resume here.</p>
+           <a href="https://drive.google.com/drive/u/0/folders/1oFL-FKAP_8yXVNWux7sQGj0Ch_BM38uj"><p>CLICK HERE</p></a> 
           </div>
         </div>
       </div>
@@ -597,28 +591,29 @@ header {
 <button class="top-btn" id="topBtn">&#8679;</button>
 
 <script>
-    let progress = 0;
-  const progressBar = document.getElementById("progress-bar");
-  const progressText = document.getElementById("progress-text");
-  const loader = document.getElementById("loader");
-  const mainContent = document.getElementById("main-content");
+let progress = 0;
+const progressBar = document.getElementById("progress-bar");
+const progressText = document.getElementById("progress-text");
+const loader = document.getElementById("loader");
+const mainContent = document.getElementById("main-content");
 
-  // Run every 100ms for 10 seconds → 100 steps
-  const interval = setInterval(() => {
-    progress++;
-    progressBar.style.width = progress + "%";
-    progressText.textContent = progress;
+// Run every 50ms for 5 seconds → 100 steps
+const interval = setInterval(() => {
+  progress++;
+  progressBar.style.width = progress + "%";
+  progressText.textContent = progress;
 
-    if (progress >= 100) {
-      clearInterval(interval);
-      // fade out loader
-      loader.style.opacity = "0";
-      setTimeout(() => {
-        loader.style.display = "none";
-        mainContent.style.display = "block";
-      }, 500);
-    }
-  }, 100);
+  if (progress >= 100) {
+    clearInterval(interval);
+    // fade out loader
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+      mainContent.style.display = "block";
+    }, 500);
+  }
+}, 50);
+
   // Mobile nav toggle
   const toggle = document.getElementById('toggle');
   const navLinks = document.getElementById('nav-links');
