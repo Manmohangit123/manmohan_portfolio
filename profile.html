@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,11 +26,20 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+    html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
 header {
   background: rgba(13, 192, 208, 0.85);; /* changed to black */
   color: white;
@@ -87,9 +95,9 @@ header {
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 0.5 rem;
     color: #000000;
-    margin-top: 10px;
+    margin-top: 15px;
   }
     .nav-links {
       display: flex;
@@ -362,6 +370,7 @@ header {
   </style>
 </head>
 <body>
+  <div class="main-content">
  <div id="loader">
   <div class="loader-content">
     <h1>KM!</h1>
@@ -369,7 +378,7 @@ header {
     <div class="progress-container">
       <div id="progress-bar"></div>
     </div>
-    <p><span id="progress-text">0</span>% - Optimizing Performance...</p>
+    <p><span id="progress-text">0</span>% - Crafting code. Creating value.</p>
   </div>
 </div>
 
@@ -397,9 +406,9 @@ header {
     <h2>Hello, I'm <span>Manmohan</span></h2>
     <p><span id="typing">
    
-    <p>UnderGrad CS</p>
-   <p><strong>7893183944</strong> | <strong>kancherlamanmohan9@gmail.com</strong></p>
-<p><strong>PVPSIT'26</strong> | <strong>NEC Finalist</strong> | <strong>E-CELL member</strong></p>
+    <h4>UnderGrad CS</h4>
+   <h4><strong>7893183944</strong> | <strong>kancherlamanmohan9@gmail.com</strong></h4>
+<h4><strong>PVPSIT'26</strong> | <strong>NEC Finalist</strong> | <strong>E-CELL member</strong></h4>
 
     </span></p>
   </div>
@@ -451,71 +460,59 @@ header {
         <div class="projects">
           <div class="projects">
 <div class="project-card">
-  <a href="https://github.com/Manmohangit123/Maxpru">
     <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location Icon" width="80" />
     <h4>MAXPRU</h4>
-  </a>
   <p>Displays the information of Turfs.</p>
+  <a href="https://github.com/Manmohangit123/Maxpru"><h4>GITHUB LINK</h4></a>
 </div>
-
-
   <div class="project-card">
-  <a href="https://github.com/Manmohangit123/spam_mail_detection">
     <img src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png" alt="Cross Symbol" width="80" />
     <h4>Spam Mail Prediction</h4>
-  </a>
   <p>Predicts spam mails to avoid cyber attacks.</p>
+    <a href="https://github.com/Manmohangit123/spam_mail_detection"><h4>GITHUB LINK</h4></a>
 </div>
 
   <div class="project-card">
-    <a href="https://github.com/Manmohangit123/fairdealmarketing">
       <img src="https://www.researchgate.net/publication/344200282/figure/fig1/AS:934544815423488@1599824255653/Processes-of-a-Fashion-Supply-Chain.jpg" alt="Portfolio">
       <h4>Fair Deal Marketing</h4>
-    </a>
-    <p>Blockchain project to reduce excessive taxes in every stage of supplychain. Done in Risein Aptos blockchain hackathon.</p>
+    <p>Blockchain project to reduce excessive taxes in every stage of supplychain.</p>
+    <a href="https://github.com/Manmohangit123/fairdealmarketing"><h4>GITHUB LINK</h4></a>
   </div>
   <div class="project-card">
-    <a href="https://github.com/Manmohangit123/Adobe_hackathon">
       <img src="https://www.adobe.com/acrobat/online/media_17c0b8336fe7005cb8598ca4035e4d26021882215.png?width=1200&format=pjpg&optimize=medium" alt="Portfolio">
       <h4>PDF Outline Extractor</h4>
-    </a>
-    <p>To transform raw PDFs into a machine-interpretable structured outline. Done in Adobe India Hackathon.</p>
+    <p>To transform raw PDFs into a machine-interpretable structured outline.</p>
+  <a href="https://github.com/Manmohangit123/Adobe_hackathon"><h4>GITHUB LINK</h4></a>
   </div>
  <div class="project-card">
-  <a href="https://github.com/Manmohangit123/heart-stroke-prediction">
   <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" 
      alt="Doctor Icon" 
      width="100" 
      height="100" 
      style="border-radius: 8px;" />
-
-
     <h4>Heart Stroke Prediction</h4>
-  </a>
   <p>ML project that predicts chances of heart stroke.</p>
+   <a href="https://github.com/Manmohangit123/heart-stroke-prediction"><h4>GITHUB LINK</h4></a>
 </div>
 <div class="project-card">
-  <a href="https://github.com/Manmohangit123/slashservices">
     <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png" alt="Pizza Icon" width="100" height="100" />
     <h4>Slash Services</h4>
-  </a>
   <p>Frontend app displaying restaurant information.</p>
+  <a href="https://github.com/Manmohangit123/slashservices"><h4>GITHUB LINK</h4></a>
 </div>
 
 <div class="project-card">
-  <a href="https://github.com/Manmohangit123/womensafetysecurity">
     <img src="https://github.com/Manmohangit123/manmohan_portfolio/blob/main/85f71317-0493-4efb-a24a-c149a8c12df0.png?raw=true" alt="Mobile App Icon" width="80" />
     <h4>Women Safety and Security</h4>
-  </a>
   <p>Mobile app built for emergency support to women.</p>
+   <a href="https://github.com/Manmohangit123/womensafetysecurity"><h4>GITHUB LINK</h4></a>
 </div>
 
   <div class="project-card">
-    <a href="https://github.com/Manmohangit123/restaurent_app">
       <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="Restaurant App">
       <h4>Restaurant App</h4>
-    </a>
     <p>Full-stack web app for restaurant features.</p>
+    <a href="https://github.com/Manmohangit123/restaurent_app"><h4>GITHUB LINK</h4></a>
   </div>
 </div>
       </div>
@@ -539,12 +536,12 @@ header {
         <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,anim=false,background=white,quality=75,width=500,height=500/event-covers/ql/cf17720c-51e2-4be2-95d2-7bd9ef559f4d.png" alt="Certificate Icon" width="80" />
         <h4>RISEIN APTOS HACKATHON</h4>
       
-      <a href="https://drive.google.com/drive/u/0/folders/1hLXaR2enVEIuqkY8LmGB2sE_KSLfvH_7"><p>For More Details........</p></a>
+      <a href="https://drive.google.com/drive/u/0/folders/1hLXaR2enVEIuqkY8LmGB2sE_KSLfvH_7"><p>For More Details...</p></a>
     </div>
      <div class="project-card">
         <img src="https://i0.wp.com/www.scholarshipsinindia.com/wp-content/uploads/adobe-india-hackathon.jpg?fit=200%2C200&ssl=1" alt="Certificate Icon" width="80" />
         <h4>Adobe India HACKATHON</h4>
-      <a href="https://drive.google.com/drive/u/0/folders/1cEd2DlPUQoMNxb_WBZ-jBlLk4DnmyxsQ"><p>For More Details........</p></a>
+      <a href="https://drive.google.com/drive/u/0/folders/1cEd2DlPUQoMNxb_WBZ-jBlLk4DnmyxsQ"><p>For More Details...</p></a>
     </div>
     
   </div>
@@ -585,12 +582,11 @@ header {
     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
   </a>
 </div>
-</div>
+</div></div>
 </section>
 <footer>
 <p>© 2025 Manmohan | All Rights Reserved</p>  
 </footer>
-
 <!-- Scroll to Top Button -->
 <button class="top-btn" id="topBtn">&#8679;</button>
 
@@ -639,17 +635,20 @@ const interval = setInterval(() => {
   });
 
   // Typing effect
-  const typingText = "Full Stack Developer | Networking";
-  let i = 0;
-  function typeWriter() {
-    if (i < typingText.length) {
-      document.getElementById("typing").innerHTML += typingText.charAt(i);
-      i++;
-      setTimeout(typeWriter, 80);
-    }
+const typingText = "Full Stack Developer | Networking";
+let i = 0;
+function typeWriter() {
+  if (i < typingText.length) {
+    document.getElementById("typing").innerHTML += typingText.charAt(i);
+    i++;
+    setTimeout(typeWriter, 80);
   }
-  window.onload = typeWriter;
+}
 
+// Delay typing effect by 5 seconds
+window.onload = () => {
+  setTimeout(typeWriter, 5000);
+};
   // Scroll to Top
   const topBtn = document.getElementById("topBtn");
   window.onscroll = () => {
